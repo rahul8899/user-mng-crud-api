@@ -4,7 +4,7 @@ import { ProductController } from './product.controller'
 import { productSchema } from './product.schema'
 import { Auth } from '../../middleware/auth.middleware'
 
-export class CategoryRoute {
+export class ProductRoute {
     router = Router()
     private prodCont: ProductController = new ProductController()
 

@@ -16,13 +16,17 @@ export const Product = sequelize.define('tbl_product',
         category_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: 'tbl_category', // Assuming you have a category model
+                key: 'id'
+            },
         },
         price: {
             type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0
         },
-        detail: {
+        details: {
             type: DataTypes.STRING(500),
             allowNull: false,
         }
